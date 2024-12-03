@@ -1,0 +1,114 @@
+/* General Styles for the .about-container */
+/* Sets up a full-screen container with centered content */
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full page height */
+    background-size: cover;/* Cover the background */
+    background-position: center;/* Center the background image */
+    background-repeat: no-repeat;/* Do not repeat the background image */
+    display: flex;
+    justify-content: center;/* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Overlay for the .about-container to enhance text readability */
+.about-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;/* Center content horizontally */
+    align-items: center;/* Center content vertically */
+    padding: 20px;/* Padding for inner spacing */
+}
+
+/* Styles for the main content section inside the overlay */
+.about-content {
+    max-width: 900px;/* Maximum width of the content */
+    padding: 30px;/* Padding around the content */
+    background: rgba(255, 255, 255, 0.1); /* Transparent white box */
+    border-radius: 15px;/* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    text-align: center;/* Center-align the text */
+    animation: fadeIn 1.5s ease-in-out;/* Animation for fade-in effect */
+}
+
+/* Keyframes for fadeIn animation used by .about-content */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from invisible */
+        transform: translateY(20px);/* Start 20px below */
+    }
+    to {
+        opacity: 1;/* End fully visible */
+        transform: translateY(0);/* End at starting position */
+    }
+}
+
+/* Main heading styles */
+.main-heading {
+    font-size: 3rem;/* Large font size for emphasis */
+    font-weight: bold;
+    color: #17a2b8; /* Light blue color */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for section headings within the .mission, .what-we-do, and .vision sections */
+.mission h2,
+.what-we-do h2,
+.vision h2 {
+    font-size: 2rem;            /* Set the font size to 2rem for better visibility */
+    margin-bottom: 15px;        /* Adds a 15px margin below each heading for spacing */
+    color: #ffffff;             /* Sets the text color to white for contrast on dark backgrounds */
+    text-transform: uppercase;  /* Transforms all text to uppercase for stylistic consistency */
+    text-align: center;         /* Centers the text horizontally within its container */
+    font-weight: 600;           /* Sets the font weight to 600 (semi-bold) for emphasis */
+}
+
+
+/* Section paragraph text */
+.mission p,
+.what-we-do p,
+.vision p {
+    font-size: 1.2rem;
+    line-height: 1.8;/* Line height for readability */
+    color: #dcdcdc; /* Light gray for contrast */
+    margin: 0 auto;/* Center-align the paragraph */
+    max-width: 700px;
+    text-align: justify;/* Justified text for a clean look */
+}
+
+/* Section spacing */
+.mission,
+.what-we-do,
+.vision {
+    margin-top: 30px;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;/* Reduced padding on smaller screens */
+        font-size: 1rem;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;/* Slightly smaller font size for smaller screens */
+    }
+
+    .mission h2,
+    .what-we-do h2,
+    .vision h2 {
+        font-size: 1.5rem;/* Reduced font size for section headings */
+    }
+
+    .mission p,
+    .what-we-do p,
+    .vision p {
+        font-size: 1rem;/* Smaller font size for paragraphs */
+    }
+}

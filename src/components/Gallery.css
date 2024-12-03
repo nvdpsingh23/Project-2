@@ -1,0 +1,111 @@
+/* This file is used to add the Styles to Gallery Page */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Pin-card functions */
+.pin-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+/* Hover effect for Pin  */
+.pin-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+/* Design for pin-image */
+.pin-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Handling popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Handling Popup Content */
+.popup-content {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: left;
+    position: relative; /* For the close button to position inside */
+}
+
+.popup-image {
+    max-width: 50%;
+    max-height: 90%;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+/* Defining labels */
+.labels {
+    max-width: 50%;
+    overflow-y: auto;
+}
+
+.labels h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.labels ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.labels ul li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+/* Design for Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: black;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Design Effect color for Close Button */
+.close-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+

@@ -1,0 +1,61 @@
+/* General styles for the application's main container */
+.App {
+  text-align: center;  /* Centers text horizontally within the container */
+  font-family: Arial, sans-serif;  /* Sets the default font to Arial */
+}
+
+/* Styling for the header section of the application */
+.App-header {
+  background-color: #282c34;  /* Dark grey background color */
+  padding: 20px;  /* Adds padding around the content within the header */
+  color: white;  /* Sets the text color to white for contrast */
+}
+
+/* Grid layout for the gallery section to display items dynamically */
+.gallery {
+  display: grid;  /* Sets the display to grid for structured layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsive columns that fit content */
+  gap: 16px;  /* Space between the grid items */
+  padding: 20px;  /* Padding around the entire gallery section */
+}
+
+/* Styles for each pin card in the gallery */
+.pin-card {
+  border: 1px solid #ddd;  /* Light grey border around the card */
+  border-radius: 8px;  /* Rounded corners for the card */
+  overflow: hidden;  /* Hides any content that overflows the card's boundaries */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for 3D effect */
+  background-color: #fff;  /* White background for the card */
+}
+
+/* Styles for images inside pin cards */
+.pin-image {
+  width: 100%;  /* Full width of the container */
+  height: auto;  /* Height adjusts automatically to maintain aspect ratio */
+}
+/* Container for details within pin cards */
+.pin-details {
+  padding: 10px;  /* Padding inside the details section */
+  text-align: left;  /* Aligns text to the left */
+}
+
+/* Heading styles within pin details */
+.pin-details h3 {
+  font-size: 18px;  /* Medium font size for subheadings */
+  margin: 0;  /* Removes margin for tighter spacing */
+}
+
+/* Paragraph styles within pin details */
+.pin-details p {
+  font-size: 14px;  /* Smaller font size for detail text */
+  color: #555;  /* Medium grey text color for readability */
+  margin: 5px 0;  /* Vertical margin for spacing */
+}
+
+/* Main content area styles */
+.main-content {
+  padding-top: 60px;  /* Top padding to offset from header */
+  margin: 0;  /* No margin for alignment */
+  min-height: 100vh;  /* Minimum height to fill the viewport */
+  background-color: #f9f9f9;  /* Light grey background for the content area */
+}
